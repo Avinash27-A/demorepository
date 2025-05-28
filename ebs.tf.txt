@@ -1,0 +1,8 @@
+Create an EBS volume
+resource "aws_ebs_volume" "my_volume" {
+  availability_zone = aws_instance.my_ec2.availability_zone
+  size              = 8 # in GiB
+  tags = {
+    Name = "MyEBSVolume"
+  }
+}
